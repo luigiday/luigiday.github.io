@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Get the current URL path
+        const currentPath = window.location.pathname;
+        // Redirect to the corresponding path on luigiday.github.io
+        window.location.href = `https://luigiday.github.io${currentPath}`;
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .message {
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1>Redirecting...</h1>
+        <p>If you are not redirected automatically, <a id="redirect-link" href="#">click here</a>.</p>
+    </div>
+    <script>
+        // Update the fallback link in case JavaScript is disabled
+        document.getElementById('redirect-link').href = `https://luigiday.github.io${currentPath}`;
+    </script>
+</body>
+</html>
